@@ -210,7 +210,17 @@
              </tr>
           </thead>
           <tbody>
-            <tr class='success'>
+               <% @games.each do |game| %>
+             <tr class='success'>
+
+               <th scope='row'><%= @games.count %></th>
+               <td><%= game["teams.name"] %></td>
+               <td><%= game["away"] %></td>
+               <td><%= game["score"] %></td>
+
+             </tr>
+              <% end %>
+            <!-- <tr class='success'>
               <th scope='row'>1</th>
               <td>Tampa Dart Dynamos</td>
               <td>Buffalo BullsEyes</td>
@@ -227,7 +237,7 @@
                <td>Orlando Golf Gang</td>
                <td>Portland Putters</td>
                <td>2-1</td>
-             </tr>
+             </tr> -->
           </tbody>
         </table>
       </div>
